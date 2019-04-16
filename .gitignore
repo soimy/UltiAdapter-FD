@@ -27,3 +27,6 @@ _autosave-*
 
 # Mac stuff
 .DS_Store
+
+# Output folder
+output/
