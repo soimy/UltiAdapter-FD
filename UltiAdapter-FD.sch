@@ -1,5 +1,4 @@
 EESchema Schematic File Version 4
-LIBS:UltiAdapter-FD-cache
 EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
@@ -120,10 +119,6 @@ Text GLabel 2800 4100 2    50   Input ~ 0
 D51-MOSI
 Wire Wire Line
 	2500 4100 2800 4100
-Text GLabel 2800 4200 2    50   Input ~ 0
-+V_LOGIC
-Wire Wire Line
-	2500 4200 2800 4200
 Wire Wire Line
 	1450 1250 1200 1250
 Text GLabel 1450 1450 2    50   Input ~ 0
@@ -229,8 +224,6 @@ F 3 "" H 2900 6600 50  0001 C CNN
 	1    2900 6600
 	1    0    0    -1  
 $EndComp
-Text GLabel 1550 6550 0    50   Output ~ 0
-+V_LOGIC
 Text GLabel 1550 6650 0    50   Output ~ 0
 MOSI
 Text GLabel 1550 6750 0    50   Output ~ 0
@@ -260,10 +253,6 @@ F 3 "" H 3500 1500 50  0001 C CNN
 	1    3500 1500
 	1    0    0    -1  
 $EndComp
-Text GLabel 3050 1250 2    50   Input ~ 0
-+V_LOGIC
-Wire Wire Line
-	3050 1250 2750 1250
 $Comp
 L Connector_Generic:Conn_02x08_Odd_Even J6
 U 1 1 5CB00233
@@ -397,12 +386,6 @@ Wire Wire Line
 Connection ~ 4800 6000
 Wire Wire Line
 	4800 6000 4800 6050
-Wire Wire Line
-	1200 2850 2000 2850
-Text GLabel 1450 2950 2    50   Input ~ 0
-+V_LOGIC
-Wire Wire Line
-	1200 2950 1450 2950
 Text GLabel 3650 5600 0    50   Output ~ 0
 D25
 $Comp
@@ -419,8 +402,8 @@ $EndComp
 Wire Notes Line
 	900  2200 2200 2200
 Wire Notes Line
-	900  2800 2200 2800
-Text Notes 1300 2600 0    50   ~ 0
+	900  2800 1350 2800
+Text Notes 1325 2450 0    50   ~ 0
 Pins shared with E1/E2\nBetter not touch them
 $Comp
 L Connector_Generic:Conn_02x05_Odd_Even J7
@@ -1262,16 +1245,162 @@ A7-RTD04
 $Comp
 L power:GND #PWR01
 U 1 1 5CB6B438
-P 2000 2950
-F 0 "#PWR01" H 2000 2700 50  0001 C CNN
-F 1 "GND" H 2005 2777 50  0000 C CNN
-F 2 "" H 2000 2950 50  0001 C CNN
-F 3 "" H 2000 2950 50  0001 C CNN
-	1    2000 2950
+P 2350 2950
+F 0 "#PWR01" H 2350 2700 50  0001 C CNN
+F 1 "GND" H 2355 2777 50  0000 C CNN
+F 2 "" H 2350 2950 50  0001 C CNN
+F 3 "" H 2350 2950 50  0001 C CNN
+	1    2350 2950
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	2000 2850 2000 2950
+	2350 2850 2350 2950
 Wire Wire Line
 	1000 6450 1550 6450
+$Comp
+L power:PWR_FLAG #FLG?
+U 1 1 5CC14D58
+P 2350 2850
+F 0 "#FLG?" H 2350 2925 50  0001 C CNN
+F 1 "PWR_FLAG" H 2350 3023 50  0000 C CNN
+F 2 "" H 2350 2850 50  0001 C CNN
+F 3 "~" H 2350 2850 50  0001 C CNN
+	1    2350 2850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:PWR_FLAG #FLG?
+U 1 1 5CC19A2F
+P 3725 1350
+F 0 "#FLG?" H 3725 1425 50  0001 C CNN
+F 1 "PWR_FLAG" H 3725 1523 50  0000 C CNN
+F 2 "" H 3725 1350 50  0001 C CNN
+F 3 "~" H 3725 1350 50  0001 C CNN
+	1    3725 1350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3725 1350 3500 1350
+Connection ~ 3500 1350
+$Comp
+L power:+3.3V #PWR?
+U 1 1 5CC1F5BA
+P 1525 2800
+F 0 "#PWR?" H 1525 2650 50  0001 C CNN
+F 1 "+3.3V" H 1540 2973 50  0000 C CNN
+F 2 "" H 1525 2800 50  0001 C CNN
+F 3 "" H 1525 2800 50  0001 C CNN
+	1    1525 2800
+	1    0    0    -1  
+$EndComp
+Wire Notes Line
+	1350 2800 1350 2525
+Wire Notes Line
+	1350 2525 2200 2525
+$Comp
+L power:PWR_FLAG #FLG?
+U 1 1 5CC35FBA
+P 1875 2800
+F 0 "#FLG?" H 1875 2875 50  0001 C CNN
+F 1 "PWR_FLAG" H 1875 2973 50  0000 C CNN
+F 2 "" H 1875 2800 50  0001 C CNN
+F 3 "~" H 1875 2800 50  0001 C CNN
+	1    1875 2800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1200 2950 1525 2950
+Wire Wire Line
+	1875 2800 1875 2950
+Wire Wire Line
+	1875 2950 1525 2950
+Connection ~ 1525 2950
+Wire Wire Line
+	1525 2800 1525 2950
+Connection ~ 2350 2850
+Wire Wire Line
+	1200 2850 2350 2850
+$Comp
+L power:+3.3V #PWR?
+U 1 1 5CC4952D
+P 3125 1125
+F 0 "#PWR?" H 3125 975 50  0001 C CNN
+F 1 "+3.3V" H 3140 1298 50  0000 C CNN
+F 2 "" H 3125 1125 50  0001 C CNN
+F 3 "" H 3125 1125 50  0001 C CNN
+	1    3125 1125
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:PWR_FLAG #FLG?
+U 1 1 5CC49CED
+P 3475 1125
+F 0 "#FLG?" H 3475 1200 50  0001 C CNN
+F 1 "PWR_FLAG" H 3475 1298 50  0000 C CNN
+F 2 "" H 3475 1125 50  0001 C CNN
+F 3 "~" H 3475 1125 50  0001 C CNN
+	1    3475 1125
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3125 1250 3125 1125
+Wire Wire Line
+	2750 1250 3125 1250
+Wire Wire Line
+	3125 1250 3475 1250
+Wire Wire Line
+	3475 1250 3475 1125
+Connection ~ 3125 1250
+$Comp
+L power:PWR_FLAG #FLG?
+U 1 1 5CC539FF
+P 4000 2100
+F 0 "#FLG?" H 4000 2175 50  0001 C CNN
+F 1 "PWR_FLAG" H 4000 2273 50  0000 C CNN
+F 2 "" H 4000 2100 50  0001 C CNN
+F 3 "~" H 4000 2100 50  0001 C CNN
+	1    4000 2100
+	1    0    0    -1  
+$EndComp
+Connection ~ 4000 2100
+$Comp
+L power:PWR_FLAG #FLG?
+U 1 1 5CC53EBC
+P 1250 4000
+F 0 "#FLG?" H 1250 4075 50  0001 C CNN
+F 1 "PWR_FLAG" H 1250 4173 50  0000 C CNN
+F 2 "" H 1250 4000 50  0001 C CNN
+F 3 "~" H 1250 4000 50  0001 C CNN
+	1    1250 4000
+	1    0    0    -1  
+$EndComp
+Connection ~ 1250 4000
+$Comp
+L power:+3.3V #PWR?
+U 1 1 5CC5427A
+P 3400 4200
+F 0 "#PWR?" H 3400 4050 50  0001 C CNN
+F 1 "+3.3V" H 3415 4373 50  0000 C CNN
+F 2 "" H 3400 4200 50  0001 C CNN
+F 3 "" H 3400 4200 50  0001 C CNN
+	1    3400 4200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2500 4200 3400 4200
+$Comp
+L power:+3.3V #PWR?
+U 1 1 5CC59E6E
+P 1300 6350
+F 0 "#PWR?" H 1300 6200 50  0001 C CNN
+F 1 "+3.3V" H 1315 6523 50  0000 C CNN
+F 2 "" H 1300 6350 50  0001 C CNN
+F 3 "" H 1300 6350 50  0001 C CNN
+	1    1300 6350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1550 6550 1300 6550
+Wire Wire Line
+	1300 6550 1300 6350
 $EndSCHEMATC
