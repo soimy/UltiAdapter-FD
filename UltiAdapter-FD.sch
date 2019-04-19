@@ -17,24 +17,24 @@ $EndDescr
 $Comp
 L Connector_Generic:Conn_02x05_Odd_Even J4
 U 1 1 5CAFC5DD
-P 1750 5500
-F 0 "J4" H 1800 5917 50  0000 C CNN
-F 1 "EXP1" H 1800 5826 50  0000 C CNN
-F 2 "Connector_IDC:IDC-Header_2x05_P2.54mm_Horizontal" H 1750 5500 50  0001 C CNN
-F 3 "~" H 1750 5500 50  0001 C CNN
-	1    1750 5500
-	1    0    0    -1  
+P 1850 5500
+F 0 "J4" H 1900 5917 50  0000 C CNN
+F 1 "EXP1" H 1900 5826 50  0000 C CNN
+F 2 "Connector_IDC:IDC-Header_2x05_P2.54mm_Horizontal" H 1850 5500 50  0001 C CNN
+F 3 "~" H 1850 5500 50  0001 C CNN
+	1    1850 5500
+	-1   0    0    1   
 $EndComp
 $Comp
 L Connector_Generic:Conn_02x05_Odd_Even J5
 U 1 1 5CAFEC00
-P 1750 6650
-F 0 "J5" H 1800 7067 50  0000 C CNN
-F 1 "EXP2" H 1800 6976 50  0000 C CNN
-F 2 "Connector_IDC:IDC-Header_2x05_P2.54mm_Horizontal" H 1750 6650 50  0001 C CNN
-F 3 "~" H 1750 6650 50  0001 C CNN
-	1    1750 6650
-	1    0    0    -1  
+P 1850 6650
+F 0 "J5" H 1900 7067 50  0000 C CNN
+F 1 "EXP2" H 1900 6976 50  0000 C CNN
+F 2 "Connector_IDC:IDC-Header_2x05_P2.54mm_Horizontal" H 1850 6650 50  0001 C CNN
+F 3 "~" H 1850 6650 50  0001 C CNN
+	1    1850 6650
+	-1   0    0    1   
 $EndComp
 $Comp
 L Connector:Conn_01x04_Male J2
@@ -201,8 +201,6 @@ $EndComp
 NoConn ~ 1550 5400
 NoConn ~ 2050 5500
 NoConn ~ 2050 5600
-Wire Wire Line
-	1550 6450 1000 6450
 Wire Wire Line
 	1000 6450 1000 6350
 $Comp
@@ -1274,4 +1272,6 @@ F 3 "" H 2000 2950 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	2000 2850 2000 2950
+Wire Wire Line
+	1000 6450 1550 6450
 $EndSCHEMATC
