@@ -2313,7 +2313,7 @@
     (effects (font (size 1.1 1.4) (thickness 0.275)) (justify right))
   )
   (gr_line (start 95.25 88.646) (end 95.25 94.742) (layer F.SilkS) (width 0.12))
-  (gr_text "UltiAdapter \nfor RAMPS-FD\nVer. 1.3b\n2019-04" (at 95.758 91.694) (layer F.SilkS)
+  (gr_text "UltiAdapter \nfor RAMPS-FD\nVer. 1.4b\n2019-05" (at 95.758 91.694) (layer F.SilkS)
     (effects (font (size 1 1) (thickness 0.15)) (justify left))
   )
   (gr_text AUX-4 (at 121.92 106.68 90) (layer B.SilkS)
